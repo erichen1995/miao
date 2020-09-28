@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form表单</title>
+  <style>
+    textarea {
+      vertical-align: top;
+    }
+  </style>
+</head>
+<body>
+  <h1>表单信息</h1>
+  <form action="#" method="GET">
+    <label>用户名: 
+      <input type="text" name="username" placeholder="请输入用户名" size="28" value="">
+    </label><br />
+    <label>邮&nbsp;&nbsp;&nbsp;箱:
+      <input type="email" name="email" placeholder="请输入邮箱" value="" placeholder="请输入邮箱" size="28">
+    </label><br />
+    <label>密&nbsp;&nbsp;&nbsp;码:
+      <input type="password" name="passwd" size="28" minlength="5" maxlength="15">
+    </label><br />
+    <label>性&nbsp;&nbsp;&nbsp;别:
+      <input type="radio" name="sex" id="man" checked>男
+      <input type="radio" name="sex" id="woman">女
+    </label><br />
+    <label>技&nbsp;&nbsp;&nbsp;能:
+      <input type="checkbox" name="technology" id="tech1">HTML
+      <input type="checkbox" name="technology" id="tech2">CSS
+      <input type="checkbox" name="technology" id="tech2">JS
+    </label><br />
+    <label>头&nbsp;&nbsp;&nbsp;像:
+      <input type="file" name="photo" id="photo" accept=".jpg, .jpeg .png .gif" size="2000000">
+    </label><br />
+    <label>现居地:
+        <select name="province" id="">
+          <option value="guangzhou">广州省</option>
+          <option value="shanghai" selected>上海市</option>
+          <option value="beijing">北京市</option>
+        </select>
+        <select name="city" id="">
+          <option value="guangdong">广东市</option>
+          <option value="shanghai" selected>上海市</option>
+          <option value="beijing">北京市</option>
+        </select>
+        <select name="area" id="">
+          <option value="baoshan" selected>宝山区</option>
+        </select>
+    </label><br />
+    <label>留&nbsp;&nbsp;&nbsp;言:</label>
+    <textarea name="content" id="cont1" cols="30" rows="10" placeholder="">请输入留言</textarea>
+    <br />
+    <input type="button" value="点我提交">&nbsp;&nbsp;&nbsp;
+    <input type="hidden" value="postId" name="postId" value="34657">
+    <input type="reset" value="点我重置">
+  </form>
+</body>
+</html>
