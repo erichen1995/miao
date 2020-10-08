@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>block-basic</title>
+  <style>
+    body {
+      margin: 20px;
+    }
+    body > div:first-child {
+      background-color: red;
+      margin: auto;
+    }
+    body > div:first-child > p {
+      width: 600px;
+      background-color: red;
+      margin: auto;
+    }
+    main {
+      width: 600px;
+      height: 246px;
+      border: 2px solid black;
+      margin: 20px auto;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
+    main > p {
+      width: 576px;
+      height: 64px;
+      overflow-x:scroll;
+      overflow-x: hidden;
+    }
+    main > div {
+      height: 50px;
+      background-color: #ee87ee;
+    }
+    main > div:hover {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    footer {
+      width: 0px;
+      height: 0px;
+      margin: auto;
+      border-width: 50px;
+      border-style: solid;
+      border-color: transparent transparent #ffa500 transparent;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>aaaaa</p>
+  </div>
+  <main>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente voluptas officiis, praesentium, nemo iure cumque nihil, facere hic asperiores dicta commodi magni, voluptates eaque esse atque nesciunt! Cupiditate, modi.
+    </p>
+    <div></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi accusantium deleniti consequuntur, enim nulla voluptatum qui ducimus esse rem eius eligendi consequatur sint. Sunt ut, est iusto neque numquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam animi perspiciatis eos, molestias provident, quae ullam! Obcaecati suscipit optio labore iusto veniam facere, amet officiis, eveniet voluptatibus molestiae, dignissimos dolor!
+    </p>
+  </main>
+  <footer></footer>
+</body>
+</html>
