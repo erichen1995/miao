@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      padding: 0;
+      margin: 0;
+    }
+    * {
+      padding: inherit;
+      margin: inherit;
+    }
+    header {
+      background-color: #000;
+      min-width: 600px;
+    }
+    header > p {
+      color: #fff;
+      width: 600px;
+      margin: auto;
+    }
+    main > p {
+      width: 600px;
+      margin: 16px auto;
+    }
+    .product-one {
+      width: 600px;
+      margin: auto;
+    }
+    .product-one > div{
+      background-color: pink;
+      width: 174px;
+      height: 34px;
+      border: 3px solid black;
+      margin-bottom: 15px;
+      text-align: center;
+      line-height: 34px;
+    }
+    .product-one > div:hover{
+      background-color: red;
+    }
+
+    .product-one > div:nth-child(-n+4) {
+      margin-left: 0px;
+    }
+    .product-one > div:nth-child(4n+5) {
+      margin-top: -220px;
+    } 
+    .product-one > div:nth-child(n+9) {
+      margin-right: 0px;
+    } 
+
+    .product-two {
+      width: 600px;
+      margin: auto;
+      word-spacing: 25px;
+      margin-bottom: 15px;
+    }
+    .product-two > span {
+      width: 174px;
+      height: 34px;
+      border: 3px solid black;
+      display: inline-block;
+      text-align: center;
+      line-height: 34px;
+      background-color: pink;
+    }
+    .product-two > span:hover {
+      background-color: red;
+    }
+    .links {
+      width: 600px;
+      margin: auto;
+    }
+    .links > p:not(:first-child) {
+      border-top: 1px dotted black;
+    }
+    footer {
+      min-width: 600px;
+      background-color: #ee8aee;
+      margin: 16px 0px;
+    }
+    footer > p {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>hello world 请调整浏览器窗口大小查看效果</p>
+  </header>
+  <main>
+      <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+      <section class="product-one">
+        <div>宽180高40(包含边框)</div>
+        <div>水平间隙30px</div>
+        <div>垂直间隙15px</div>
+        <div>边框宽度3px</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+      </section>
+      <section class="product-two">
+        <span>宽180高40</span>
+        <span>产品</span>
+        <span>产品</span>
+        <span>水平间隙30px</span>
+        <span>产品</span>
+        <span>产品</span>
+        <span>垂直间隙15px</span>
+        <span>产品</span>
+        <span>产品</span>
+        <span>边框宽度3px</span>
+        <span>产品</span>
+        <span>产品</span>
+      </section>
+      <div class="links">
+        <p>link</p>
+        <p>link</p>
+        <p>link</p>
+        <p>link</p>
+        <p>link</p>
+      </div>
+  </main>
+  <footer>
+    <p>©版权所有<br />本页所有布局均使用块元素</p>
+  </footer>
+</body>
+</html>
