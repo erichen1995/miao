@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>abs-center.html</title>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, .1);
+      box-shadow: 0 0 1px  red;
+    }
+    .plan-one {
+      width: 400px;
+      height: 200px;
+      margin: auto;
+      position: relative;
+    }
+    .plan-one > div {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .plan-two {
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      font-size: 0;
+    }
+    .plan-two > em {
+      height: 100%;
+    }
+    .plan-two > span {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      border: 1px solid black;
+      vertical-align: middle;
+    }
+
+    .plan-three {
+      width: 400px;
+      height: 200px;
+      display: table;
+      margin: auto;
+      text-align: center;
+    }
+    .plan-three > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .plan-three span {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+    }
+
+    .plan-four {
+      width: 400px;
+      height: 200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+    }
+    .plan-four > div {
+      height: 50px;
+      width: 50px;
+      border: 1px solid black;
+      margin: auto;
+    }
+
+    .plan-five {
+      height: 200px;
+    }
+    .plan-five > div {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="plan plan-one">
+    <div></div>
+  </div>
+  <hr />
+  <div class="plan plan-two">
+    <em>y</em>
+    <span></span>
+  </div>
+  <hr />
+  <div class="plan plan-three">
+    <div>
+      <span></span>
+    </div>
+  </div>
+  <hr />
+  <div class="plan plan-four">
+    <div></div>
+  </div>
+  <div class="plan plan-five">
+    <div></div>
+  </div>
+</body>
+</html>
