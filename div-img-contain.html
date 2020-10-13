@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>div-img-contain</title>
+  <style>
+    * {
+      background-color: rgb(0,0,0,.1);
+      box-shadow: 0 0 1px red;
+    }
+
+    .object {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .background {
+      width: 200px;
+      height: 200px;
+      background-image: url("https://cn.bing.com/th?id=OHR.RoaringCascade_EN-CN0375853295_400x240.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 0;
+    }
+
+    .position {
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+    .position > img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <img class="object" src="https://cn.bing.com/th?id=OHR.RestormelCastle_EN-CN5344913777_400x240.jpg" alt="">
+  <hr>
+  <div class="background"></div>
+  <hr>
+  <div class="position">
+    <img src="https://cn.bing.com/th?id=OHR.YunchengSaltLake_EN-CN4280436167_400x240.jpg" alt="">
+  </div>
+</body>
+</html>
