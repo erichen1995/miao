@@ -9,11 +9,18 @@
       background-color: rgb(0,0,0,.1);
       box-shadow: 0 0 1px red;
     }
-    [class]
+
     .object {
       width: 200px;
       height: 200px;
+      margin: auto;
+      text-align: center;
+    }
+    .object > img{
+      width: 50px;
+      height: 50px;
       object-fit: contain;
+      margin-top: calc(50% - 25px);
     }
 
     .background {
@@ -23,27 +30,16 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 0;
-    }
-
-    .position {
-      width: 200px;
-      height: 200px;
-      position: relative;
-    }
-    .position > img {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
       margin: auto;
     }
 
-    .position-two {
+    .position{
       width: 200px;
       height: 200px;
       position: relative;
+      margin: auto;
     }
-    .position-two > img {
+    .position > img {
       height: 100%;
       position: absolute;
       left: 0;
@@ -53,14 +49,13 @@
   </style>
 </head>
 <body>
-  <img class="object" src="https://cn.bing.com/th?id=OHR.RestormelCastle_EN-CN5344913777_400x240.jpg" alt="">
+  <div class="object">
+    <img src="https://cn.bing.com/th?id=OHR.RestormelCastle_EN-CN5344913777_400x240.jpg" alt="">
+  </div>
   <hr>
   <div class="background"></div>
   <hr>
   <div class="position">
-    <img src="https://cn.bing.com/th?id=OHR.YunchengSaltLake_EN-CN4280436167_400x240.jpg" alt="">
-  </div>
-  <div class="position-two">
     <img src="https://tse1-mm.cn.bing.net/th/id/OIP.aru2_ldOkMAxkbZy3gxIrQHaOy?w=175&h=350&c=7&o=5&pid=1.7" alt="">
   </div>
 </body>
