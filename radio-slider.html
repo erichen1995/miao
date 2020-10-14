@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>radio-slider</title>
+  <style>
+    section {
+      width: 400px;
+      height: 240px;
+      margin: 30px auto;
+      border: 3px solid black;
+      position: relative;
+      /* overflow: hidden; */
+    }
+
+    img {
+      width: 400px;
+      position: absolute;
+      /* display: none; */
+      left: 0;
+      top: 0;
+      transition: 2s;
+      opacity: 0;
+    }
+    input {
+      position: relative;
+      top: 200px;
+      left: 10px;
+      z-index: 1;
+    }
+    /* input:checked + * + * + * + * + img {
+      top: 0;
+      left: 0;
+      display: block;
+      opacity: 1;
+    } */
+    input:nth-child(1):checked ~ div > img:nth-child(1),
+    input:nth-child(2):checked ~ div > img:nth-child(2),
+    input:nth-child(3):checked ~ div > img:nth-child(3),
+    input:nth-child(4):checked ~ div > img:nth-child(4),
+    input:nth-child(5):checked ~ div > img:nth-child(5){
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <section>
+
+      <input type="radio" name="slider" id="one" checked>
+      <input type="radio" name="slider" id="two">
+      <input type="radio" name="slider" id="three">
+      <input type="radio" name="slider" id="four">
+      <input type="radio" name="slider" id="five">
+      <label for="one"><</label>   
+    <div>
+      <img src="https://cn.bing.com/th?id=OHR.AmericanFlyer_EN-CN0572496177_400x240.jpg" alt="">
+      <img src="https://cn.bing.com/th?id=OHR.BlanketOctopus_EN-CN5609079990_400x240.jpg" alt="">
+      <img src="https://cn.bing.com/th?id=OHR.GeghardMonastery_EN-CN0909451678_400x240.jpg" alt="">
+      <img src="https://cn.bing.com/th?id=OHR.RoaringCascade_EN-CN0375853295_400x240.jpg" alt="">
+      <img src="https://cn.bing.com/th?id=OHR.MountCetatea_EN-CN2318138498_400x240.jpg" alt="">
+    </div>
+  </section>
+</body>
+</html>
