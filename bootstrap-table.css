@@ -1,0 +1,176 @@
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.5;
+}
+
+/* table 基础类 */
+.table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+table {
+  border-collapse: collapse;
+}
+.table td, .table th {
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+.table td {
+  vertical-align: top;
+}
+
+/* table-dark类 */
+.table-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+.table-dark td, .table-dark th {
+  padding: 0.75rem;
+  border-top: 1px solid #454d55;
+}
+.table-dark thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #454d55;
+}
+.table-dark td {
+  vertical-align: top;
+}
+
+/* thead-dark 和 thead-light 类 */
+.thead-dark {
+  background-color: #343a40;
+  /* border-color: #343a40; */
+  color: #fff;
+}
+thead.thead-dark th {
+  border-color: #343a40;
+  
+}
+.thead-light {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+/* .table-striped */
+.table-striped > tbody tr:nth-child(2n+1){
+  background-color: rgba(0,0,0,.05);
+}
+
+/* .table && .table-striped && .table-dark */
+.table-dark[class*="table-striped"] > tbody tr:nth-child(2n+1){
+  background-color: rgba(255,255,255,.05);
+}
+
+/* .table-bordered */
+.table-bordered  th {
+  border: 1px solid  #dee2e6;
+}
+.table-bordered tbody td {
+  border: 1px solid  #dee2e6;
+}
+
+/* .table-bordered && .table-dark */
+.table-dark[class*="table-bordered"] th {
+  border-color: #454d55;
+}
+.table-dark[class*="table-bordered"] td {
+  border-color: #454d55;
+}
+
+/* .table && .table-borderless */
+table.table-borderless th {
+  border: none;
+}
+table.table-borderless tr {
+  border: none;
+}
+table.table-borderless td {
+  border: none;
+}
+
+/* .table && .table-hover */
+.table-hover tbody tr:hover {
+  background-color: rgba(0,0,0,.075);
+}
+
+/* .table && .table-hover && .table-dark */
+.table-dark[class*="table-hover"] tbody tr:hover {
+  background-color: rgba(255,255,255,.075);
+}
+
+/* .table && table-sm */
+table.table-sm td, table.table-sm th{
+  padding: 0.3rem;
+}
+
+
+/* 上下文类 */
+.table-active, .table-active td, .table-active th {
+  background-color: rgba(0,0,0,.075);
+}
+.table-primary, .table-primary td, .table-primary th {
+  background-color: #b8daff;
+  border-color: rgb(122, 186, 255)
+}
+.table-secondary, .table-secondary td, .table-secondary th {
+  background-color: #d6d8db;
+  border-color: #b3b7bb;
+}
+.table-success, .table-success td, .table-success th {
+  background-color: rgb(195, 230, 203);
+  border-color: #8fd19e;
+}
+.table-danger, .table-danger td, .table-danger th {
+  background-color: rgb(245, 198, 203);
+  border-color: #ed969e;
+}
+.table-warning, .table-warning td, .table-warning th {
+  background-color: #ffeeba;
+  border-color: rgb(255, 223, 126);
+}
+.table-info, .table-info td, .table-info th {
+  background-color: #bee5eb;
+  border-color: #86cfda;
+}
+.table-light, .table-light td, .table-light th {
+  background-color: #fdfdfe;
+  border-color: #fbfcfc;
+}
+tr.table-dark, tr.table-dark td, tr.table-dark th {
+  background-color: #c6c8ca;
+  border-color: #454d55;
+}
+
+/* 文本或背景工具 && .table-dark */
+.bg-primary {
+  background-color: #007bff!important;
+}
+.bg-success {
+  background-color: #28a745!important;
+}
+.bg-info {
+  background-color: #17a2b8!important;
+}
+.bg-warning {
+  background-color: #ffc107!important;
+}
+.bg-danger {
+  background-color: #dc3545!important;
+}
+
+/* 标题 */
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
