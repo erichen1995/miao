@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wechat-switch</title>
+  <style>
+    input {
+      display: none;
+    }
+    .switch {
+      width: 260px;
+      height: 150px;
+      position: relative;
+      border: 2px solid #dfdfdf;
+      background-color: #fdfdfd;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .switch::before {
+      content: '';
+      width: 130px;
+      height: 130px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #fff;
+      border-radius: 999px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    }
+    input:checked + .switch::before {
+      left: 120px;
+    }
+    .switch {
+      transition: border 0.4s, box-shadow 0.4s;
+    }
+    .switch::before {
+      transition: 0.3s;
+    }
+    input:checked + .switch {
+      box-shadow: inset 110px 0 20px 50px #64bd63, inset 0px 0 0px 40px #64bd63;
+      background-color: #64bd63;
+      transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1s;
+    }
+    input:checked + .switch::before {
+      transition: left 0.3s;
+    }
+  </style>
+</head>
+<body>
+    <input type="checkbox" id="a">
+    <label for="a" class="switch">
+  </div>
+</body>
+</html>
