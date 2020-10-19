@@ -12,7 +12,7 @@ body {
   text-align: left;
   margin-bottom: 1rem;
 }
-table {
+.table {
   border-collapse: collapse;
 }
 .table td, .table th {
@@ -65,36 +65,32 @@ thead.thead-dark th {
 }
 
 /* .table && .table-striped && .table-dark */
-.table-dark[class*="table-striped"] > tbody tr:nth-child(2n+1){
+.table-dark.table-striped > tbody tr:nth-child(2n+1){
   background-color: rgba(255,255,255,.05);
 }
 
 /* .table-bordered */
-.table-bordered  th {
-  border: 1px solid  #dee2e6;
-}
-.table-bordered tbody td {
+.table-bordered, .table-bordered  th, .table-bordered tbody td {
   border: 1px solid  #dee2e6;
 }
 
+
 /* .table-bordered && .table-dark */
-.table-dark[class*="table-bordered"] th {
+.table-dark.table-bordered th {
   border-color: #454d55;
 }
-.table-dark[class*="table-bordered"] td {
+.table-dark.table-bordered td {
   border-color: #454d55;
 }
 
 /* .table && .table-borderless */
-table.table-borderless th {
+table.table-borderless th,
+table.table-borderless tr,
+table.table-borderless td
+{
   border: none;
 }
-table.table-borderless tr {
-  border: none;
-}
-table.table-borderless td {
-  border: none;
-}
+
 
 /* .table && .table-hover */
 .table-hover tbody tr:hover {
@@ -102,7 +98,7 @@ table.table-borderless td {
 }
 
 /* .table && .table-hover && .table-dark */
-.table-dark[class*="table-hover"] tbody tr:hover {
+.table-dark.table-hover tbody tr:hover {
   background-color: rgba(255,255,255,.075);
 }
 
