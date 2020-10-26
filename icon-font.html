@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>icon font</title>
+  <style>
+    @font-face {
+      font-family: fontawesome;
+      src: url(./fontawesome-webfont.woff2);
+    }
+    body {
+      font-size: 14px;
+    }
+    p {
+      box-sizing: border-box;
+    }
+    a {
+      text-decoration: none;
+    }
+    .fa {
+      display: inline-block;
+      font-style: normal;
+      font-family: fontawesome;
+      font-variant: normal;
+      font-size: inherit;
+    }
+    .fa.fa-camera-retro::after {
+      content: "\f083";
+    }
+    .fa-lg {
+      font-size: 1.33333333em;
+    }
+    .fa-2x {
+      font-size: 2em;
+    }
+    .fa-3x {
+      font-size: 3em;
+    }
+    .fa-4x {
+      font-size: 4em;
+    }
+    .fa-5x {
+      font-size: 5em;
+    }
+    .xlist-group {
+      xoverflow: hidden;
+    }
+    .list-group-item {
+      display: block;
+      color: #555;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      margin-bottom: -1px;
+    }
+    .list-group-item:first-child {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .list-group-item:last-child {
+      margin-bottom: 0;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    .fa-home::before {
+      content: "\f015";        
+    }
+    .fa-book::before {
+      content: "\f02d";      
+    }
+    .fa-pencil::before {
+      content: "\f040";      
+    }
+    .fa-cog::before {
+      content: "\f013";      
+    }
+    .fa-fw {
+      width: 1.28571429em;
+      text-align: center;
+    }
+    ul {
+      margin-top: 0px;
+      margin-bottom: 10px;
+    } 
+    .fa-ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 2.14285714em;
+    }
+    .fa-ul > li {
+      position: relative;
+    }
+    .fa-li {
+      position: absolute;
+      left: -2.14285714em;
+      width: 2.14285714em;
+      top: 0.14285714em;
+      text-align: center;
+    }
+    .fa-check-square::before {
+      content: "\f14a";
+    }
+    .fa-spinner::before {
+      content: "\f110";
+    }
+    .fa-square::before {
+      content: "\f0c8";
+    }
+
+    .fa-quote-left::before {
+      content: "\f10d";
+    }
+    .fa-border {
+      padding: .2em .25em .15em;
+      border: solid 0.08em #eee;
+      border-radius: .1em;
+    }
+    .fa-pull-left {
+      float: left;
+      margin-right: .3em;
+    }
+    .fa-shield::before {
+      content: "\f132";
+    }
+    .fa-rotate-90 {
+      transform: rotate(90deg);
+    }
+    .fa-rotate-180 {
+      transform: rotate(180deg);
+    }
+    .fa-rotate-270 {
+      transform: rotate(270deg);
+    }
+    .fa-flip-horizontal {
+      transform: scaleX(-1);
+    }
+    .fa-flip-vertical {
+      transform: scaleY(-1);
+    }
+
+    .fa-stack {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      text-align: center;
+    }
+    .fa-stack-1x, .fa-stack-2x {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      xtext-align: center;
+    }
+    .fa-square-o::before {
+      content: "\f096";
+    }
+    .fa-twitter::before {
+      content: "\f099";
+    }
+    .fa-stack-1x {
+      font-size: 1em;
+    }
+    .fa-stack-2x {
+      font-size: 2em;
+    }
+    .fa-circle::before {
+      content: "\f111";
+    }
+    .fa-flag::before {
+      content: "\f024";
+    }
+    .fa-inverse {
+      color: #fff;
+    }
+    .fa-terminal::before {
+      content: "\f120";
+    }
+    .fa-camera::before {
+      content: "\f030";
+    }
+    .fa-ban::before {
+      content: "\f05e";
+    }
+    .text-danger {
+      color: #d9534f;
+    }
+    .btn-primary, .btn-danger, .btn-warning, .btn-info {
+      text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    }
+    .btn {
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2);
+      display: inline-block;
+      xmargin-bottom: 0px;
+      xtext-align: center;
+      xvertical-align: middle;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn-danger {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d43f3a;
+    }
+    .fa-trash-o::before {
+      content: "\f014";
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Basic Icons</h2>
+  <hr />
+  <p><i class="fa fa-camera-retro"></i>fa-camera-retro</p>
+  <h2>larger Icons</h2>
+  <p><i class="fa fa-camera-retro fa-lg"></i> fa-lg</p>
+  <p><i class="fa fa-camera-retro fa-2x"></i> fa-2x</p>
+  <p><i class="fa fa-camera-retro fa-3x"></i> fa-3x</p>
+  <p><i class="fa fa-camera-retro fa-4x"></i> fa-4x</p>
+  <p><i class="fa fa-camera-retro fa-5x"></i> fa-5x</p>
+  
+  <h2>Fixed Width Icons</h2>
+  <hr />
+  <div class="list-group">
+    <a class="list-group-item" href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a>
+    <a class="list-group-item" href="#"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Library</a>
+    <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; Applications</a>
+    <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; Settings</a>
+  </div>
+
+  <h2>List Icons</h2>
+  <hr />
+  <ul class="fa-ul">
+    <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+    <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+    <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+    <li><i class="fa-li fa fa-square"></i>in lists</li>
+  </ul>
+  
+  <h2>Bordered & Pulled Icons</h2>
+  <hr />
+  <i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
+...tomorrow we will run faster, stretch out our arms farther...
+And then one fine morning&mdash; So we beat on, boats against the
+current, borne back ceaselessly into the past.
+
+  <h2>Rotated & Flipped</h2>
+  <hr />
+  <i class="fa fa-shield"></i> normal<br>
+  <i class="fa fa-shield fa-rotate-90"></i> fa-rotate-90<br>
+  <i class="fa fa-shield fa-rotate-180"></i> fa-rotate-180<br>
+  <i class="fa fa-shield fa-rotate-270"></i> fa-rotate-270<br>
+  <i class="fa fa-shield fa-flip-horizontal"></i> fa-flip-horizontal<br>
+  <i class="fa fa-shield fa-flip-vertical"></i> fa-flip-vertical
+
+  <h2>Stacked Icons</h2>
+  <span class="fa-stack fa-lg">
+    <i class="fa fa-square-o fa-stack-2x"></i>
+    <i class="fa fa-twitter fa-stack-1x"></i>
+  </span>
+  fa-twitter on fa-square-o<br>
+  <span class="fa-stack fa-lg">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+  </span>
+  fa-flag on fa-circle<br>
+  <span class="fa-stack fa-lg">
+    <i class="fa fa-square fa-stack-2x"></i>
+    <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+  </span>
+  fa-terminal on fa-square<br>
+  <span class="fa-stack fa-lg">
+    <i class="fa fa-camera fa-stack-1x"></i>
+    <i class="fa fa-ban fa-stack-2x text-danger"></i>
+  </span>
+  fa-ban on fa-camera
+</body>
+</html>
