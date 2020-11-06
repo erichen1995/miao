@@ -248,8 +248,15 @@
     .tooltip-red[data-balloon-pos="right"]::before {
       border-right-color: #f00;
     }
+
+    /* tooltip-big-text */
     .tooltip-big-text {
       --balloon-font-size: 20px;
+    }
+
+    /* tooltip-slide */
+    .tooltip-slide {
+      --balloon-move: 100px;
     }
   </style>
 </head>
@@ -267,7 +274,7 @@
     <button data-balloon-blunt aria-label="No animation!" data-balloon-pos="up">No animation!</button>
     <button aria-label="I am red!" class="tooltip-red" data-balloon-pos="right">I am red!</button>
     <button aria-label="I have big text!" class="tooltip-big-text">I have big text!</button>
-
+    <button aria-label="I move a lot!" class="tooltip-slide">I move a lot!</button>
   </div>
 </body>
 </html>
