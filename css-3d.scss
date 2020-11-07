@@ -1,0 +1,147 @@
+@keyframes rotate-1 {
+  from {
+    transform: rotate3d(-1,-1,0, 0deg);
+  }
+  to {
+    transform: rotate3d(-1,-1,0, 360deg);
+  }
+}
+
+@keyframes rotate-2 {
+  from {
+    transform: rotate3d(-1,-1, 1, 0deg);
+  }
+  to {
+    transform: rotate3d(-1,-1, 1, 360deg);
+  }
+}
+
+body {
+  background-color: gray;
+}
+section {
+  width: 500px;
+  height: 500px;
+  transform-style: preserve-3d;
+  position: relative;
+  margin: 200px auto;
+  xtransform: rotate3d(1,1,0,45deg);
+  animation: rotate-1 10s 9999 linear;
+  animation: rotate-2 10s 9999 linear;
+  .face {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    backface-visibility: inherit;
+    font-size: 60px;
+  }
+
+}
+
+table {
+  width: 256px;
+  height: 256px;
+  border-collapse: collapse;
+  td {
+    width: 1px;
+    height: 1px;
+  }
+}
+
+
+
+.front {
+  table {
+    @for $i from 0 through 32 {
+      tr:nth-child(#{$i+1}) {
+        @for $j from 0 through 32 {
+          td:nth-child(#{$j+1}) {
+            background-color: rgb(255, (8 * $j), (255 - 8*$i));
+          }
+        }
+      }
+    }
+  }
+  transform: translateZ(128px);
+}
+
+
+.back {
+  table {
+    @for $i from 0 through 32 {
+      tr:nth-child(#{$i+1}) {
+        @for $j from 0 through 32 {
+          td:nth-child(#{$j+1}) {
+            background-color: rgb(0, (255 - 8 * $j), (255 - 8*$i));
+          }
+        }
+      }
+    }
+  }
+  transform: rotateY(180deg) translateZ(128px);
+}
+
+.left {
+  table {
+    @for $i from 0 through 32 {
+      tr:nth-child(#{$i+1}) {
+        @for $j from 0 through 32 {
+          td:nth-child(#{$j+1}) {
+            background-color: rgb((8 * $j), 0, (255 - 8*$i));
+          }
+        }
+      }
+    }
+  }
+
+  transform: rotateY(-90deg) translateZ(128px);
+}
+.right {
+  table {
+    @for $i from 0 through 32 {
+      tr:nth-child(#{$i+1}) {
+        @for $j from 0 through 32 {
+          td:nth-child(#{$j+1}) {
+            background-color: rgb((255 - 8 * $j), 255, (255 - 8*$i));
+          }
+        }
+      }
+    }
+  }
+  transform: rotateY(90deg) translateZ(128px);
+}
+
+
+.top {
+  table {
+    @for $i from 0 through 32 {
+      tr:nth-child(#{$i+1}) {
+        @for $j from 0 through 32 {
+          td:nth-child(#{$j+1}) {
+            background-color: rgb((0 + 8 * $i), (0 + 8 * $j), 255);
+          }
+        }
+      }
+    }
+  }
+  transform: rotateX(90deg) translateZ(128px);
+}
+
+
+.bottom {
+  table {
+    @for $i from 0 through 32 {
+      tr:nth-child(#{$i+1}) {
+        @for $j from 0 through 32 {
+          td:nth-child(#{$j+1}) {
+            background-color: rgb((255 - 8 * $i), (0 + 8 * $j), 0);
+          }
+        }
+      }
+    }
+  }
+  transform: rotateX(-90deg) translateZ(128px);
+}
