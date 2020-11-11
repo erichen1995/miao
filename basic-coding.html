@@ -1,0 +1,412 @@
+<meta charset="uft-8">
+<script xtype="norun" id="ch0103/01">
+console.log(Number(prompt()) + Number(prompt()))
+</script>
+
+<script xtype="norun" id="ch0103/02">
+  console.log( (Number(prompt()) + Number(prompt())) * Number(prompt()) )
+</script>
+
+
+<script xtype="norun" id="ch0103/03">
+  // 可以使用两数之和减去余数的差再除以 除数
+  console.log( parseInt( ( Number( prompt() ) + Number( prompt() ) ) / Number(prompt()) ) )
+
+</script>
+
+<script xtype="norun" id="ch0103/04">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  console.log( parseInt(a / b) )
+  console.log( a % b )
+</script>
+
+<script xtype="norun" id="ch0103/05">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  console.log( (a / b).toFixed(9) )
+</script>
+
+<script xtype="norun" id="ch0103/06">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  var c = b / a * 100
+  console.log( c.toFixed(3) + "%" )
+</script>
+
+<script xtype="norun" id="ch0103/07">
+  var x = Number( prompt() )
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  var c = Number( prompt() )
+  var d = Number( prompt() )
+
+  var f = a * x * x * x + b * x * x + c * x + d
+  console.log( f.toFixed(7))
+</script>
+
+<script xtype="norun" id="ch0103/08">
+  var f = Number( prompt() )
+  var c = 5 * ( f - 32 ) / 9
+  console.log( c.toFixed(5))
+</script>
+
+<script xtype="norun" id="ch0103/09">
+  var radius = Number( prompt() )
+  var pi = 3.14159
+  console.log( ( 2 * radius ).toFixed(4) + " " + ( pi * 2 * radius ).toFixed(4) + " " + ( pi * radius * radius ).toFixed(4) )
+</script>
+
+<script xtype="norun" id="ch0103/10">
+  var r1 = Number( prompt() )
+  var r2 = Number( prompt() )
+  var R = 1 / ( 1 / r1 + 1 / r2 )
+  console.log( R.toFixed(2))
+</script>
+
+<script xtype="norun" id="ch0103/11">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  var r = a - parseInt( a / b ) * b
+  console.log( r.toFixed(4) )
+</script>
+
+<script xtype="norun" id="ch0103/12">
+  var radius = Number( prompt() )
+  var pi = 3.14
+  console.log( ( 4 / 3 * pi * radius * radius * radius ).toFixed(2) )
+</script>
+
+<script xtype="norun" id="ch0103/13">
+  var num = Number( prompt() )
+  // 可以写成 value = "" + num1 + num2 +num3  就可以转换成字符串拼接
+  console.log( String( num % 10 ) + String(  (num % 100 - num % 10) / 10 ) + String( parseInt( num / 100 ) ) )
+</script>
+
+<script xtype="norun" id="ch0103/14">
+  var h = Number( prompt() )
+  var radius = Number( prompt() )
+  var pi = 3.14159
+
+  console.log( Math.ceil( 20000 / ( pi * radius * radius * h) ) )
+</script>
+
+<script xtype="norun" id="ch0103/15">
+  var n = Number( prompt() )
+  var x = Number( prompt() )
+  var y = Number( prompt() )
+
+  console.log( n - Math.ceil( y / x )  )
+</script>
+
+<script xtype="norun" id="ch0103/16">
+  var Xa = Number( prompt() )
+  var Ya = Number( prompt() )
+  var Xb = Number( prompt() )
+  var Yb = Number( prompt() )
+
+  console.log( ( Math.sqrt( (Xb - Xa) * (Xb - Xa) + ( Yb - Ya ) * ( Yb - Ya ) ) ).toFixed(3) )
+</script>
+
+<script xtype="norun" id="ch0103/17">
+  var X1 = Number( prompt() )
+  var Y1 = Number( prompt() )
+  var X2 = Number( prompt() )
+  var Y2 = Number( prompt() )
+  var X3 = Number( prompt() )
+  var Y3 = Number( prompt() )
+  var a =Number( ( Math.sqrt( (X2 - X1) * (X2 - X1) + ( Y2 - Y1 ) * ( Y2 - Y1 ) ) ).toFixed(2) )
+  var b =Number( ( Math.sqrt( (X3 - X2) * (X3 - X2) + ( Y3 - Y2 ) * ( Y3 - Y2 ) ) ).toFixed(2) )
+  var c =Number( ( Math.sqrt( (X1 - X3) * (X1 - X3) + ( Y1 - Y3 ) * ( Y1 - Y3 ) ) ).toFixed(2) )
+  var p = ( a + b + c ) / 2
+
+  console.log( Math.sqrt( p * ( p - a ) * ( p - b ) * ( p - c ) ).toFixed(2) )
+</script>
+
+
+<script xtype="norun" id="ch0103/18">
+  var a1 = Number( prompt() )
+  var a2 = Number( prompt() )
+  var n = Number( prompt() )
+
+  console.log( a1 + ( n - 1 ) * ( a2 - a1 ) )
+</script>
+
+<script xtype="norun" id="ch0103/19">
+console.log(Number(prompt()) * Number(prompt()))
+</script>
+
+<script xtype="norun" id="ch0103/20">
+  var n = Number( prompt() )
+
+  // 可以使用 2 << ( n - 1 ) 计算  n = 0 时 等于0 需要另行计算
+  var value = 1;
+  for ( var i = 1; i <= n; i++ ) {
+    value = value * 2
+  }
+  console.log( value )
+  </script>
+
+<script xtype="norun" id="ch0104/01">
+  var N = Number( prompt() )
+  if ( N > 0 ) {
+    console.log("positive")
+  } else if ( N == 0 ) {
+    console.log("zero")
+  } else {
+    console.log("negative")
+  }
+</script>
+
+<script xtype="norun" id="ch0104/02">
+  var N = Number( prompt() )
+  if ( N >= 0 ) {
+    console.log( N.toFixed(2) )
+  } else {
+    console.log( ( - N ).toFixed(2) )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/03">
+  var N = Number( prompt() )
+  if ( N % 2 == 0 ) {
+    console.log( "even" )
+  } else if( N % 2 == 1 ) {
+    console.log( "odd" )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/04">
+  var char = ( prompt() )
+  var N = char.charCodeAt()
+  if ( N % 2 == 0 ) {
+    console.log( "NO" )
+  } else if( N % 2 == 1 ) {
+    console.log( "YES" )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/05">
+  var x = Number( prompt() )
+  var y = Number( prompt() )
+
+  if ( x > y ) {
+    console.log( ">" )
+  } else if( x == y ) {
+    console.log( "=" )
+  } else {
+    console.log( " < " )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/06">
+  var n = Number( prompt() )
+
+  if ( n >= 10 && n <= 99 ) {
+    console.log( 1 )
+  } else {
+    console.log( 0 )
+  }
+</script>
+
+
+<script xtype="norun" id="ch0104/07">
+  var x = Number( prompt() )
+  var y = Number( prompt() )
+
+  if ( x >= 10 || y >= 20 ) {
+    console.log( 1 )
+  } else {
+    console.log( 0 )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/08">
+  var n = Number( prompt() )
+
+  if ( n % 3 == 0 && n % 5 == 0 ) {
+    console.log( "YES" )
+  } else {
+    console.log( "NO" )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/09">
+  var n = Number( prompt() )
+
+  if ( n % 3 == 0 && n % 5 == 0 && n % 7 == 0) {
+    console.log( "3 5 7" )
+  } else if ( n % 3 == 0 && n % 5 == 0 ) {
+    console.log( "3 5" )
+  } else if ( n % 5 == 0 && n % 7 == 0 ) {
+    console.log( "5 7" )
+  } else if ( n % 3 == 0 && n % 7 == 0 ) {
+    console.log( "3 7" )
+  } else {
+    console.log( 'n' )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/10">
+  var x = Number( prompt() )
+  var y = Number( prompt() )
+
+  if ( x < 60 && y >= 60 ) {
+    console.log( 1 )
+  } else if ( x >= 60 && y < 60 ) {
+    console.lgo( 1 )
+  } else {
+    console.log( 0 )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/11">
+  var n = Number( prompt() )
+
+  if ( n != 1 && n != 3 && n != 5) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+</script>
+
+<script xtype="norun" id="ch0104/12">
+  var n = Number( prompt() )
+  var b = 27 + 23 + n / 3.0
+  var w = n / 1.2
+
+  console.log([b,w])
+  if ( b > w ) {
+    console.log("Walk")
+  } else if ( b == w) {
+    console.log( "All" )
+  } else{
+    console.log( "Bike" )
+  }
+</script>
+
+
+<script xtype="norun" id="ch0104/13">
+  var N = Number( prompt() )
+
+  if ( N >= 0 && N < 5) {
+    console.log( ( - N + 2.5 ).toFixed(2) )
+  } else if( N >= 5 && N < 10 ) {
+    console.log( ( 2 - 1.5 * ( N - 3 ) * ( N - 3 ) ).toFixed(2) )
+  } else if ( N >= 10 && N < 20 ) {
+    console.log( ( N / 2 - 1.5 ).toFixed(2) )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/14">
+  var x = Number( prompt() )
+  var str = ( prompt() )
+  var m = 0
+  if ( x <= 1000 ) {
+    if ( str == 'y') {
+      console.log( 8 + 5 )
+    } else if ( str == 'n') {
+      console.log( 8 )
+    }
+  } else {
+    m = Math.ceil( ( x - 1000 ) / 500 ) * 4 + 8
+    if ( str == 'y') {
+      console.log( m + 5 )
+    } else if ( str == 'n') {
+      console.log( m )
+    }
+  }
+</script>
+
+
+<script xtype="norun" id="ch0104/15">
+  var x = Number( prompt() )
+  var y = Number( prompt() )
+  var z = Number( prompt() )
+  console.log( Math.max(x, y, z) )
+</script>
+
+<script xtype="norun" id="ch0104/16">
+  var x = Number( prompt() )
+  var y = Number( prompt() )
+  var z = Number( prompt() )
+
+  if ( x + y > z &&  y + z > x && x + z > y) {
+    console.log( "yes" )
+  } else {
+    console.log ( "no" )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/17">
+  var year = Number( prompt() )
+
+  if ( year % 4 == 0 && year % 100 != 0 ||  year % 400 == 0 ) {
+    console.log ( "Y" )
+  } else {
+    console.log ( "N" )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/18">
+  var x1 = Number( prompt() )
+  var x2 = Number( prompt() )
+
+  if ( x1 <= 1 && x1 >= -1) {
+    if ( x2 <= 1 && x2 >= -1 ) {
+      console.log( 'yes' )
+    } else {
+      console.log( 'no' )
+    }
+  } else {
+    console.log( 'no' )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/19">
+  var x1 = Number( prompt() )
+  var x2 = Number( prompt() )
+  var operator = ( prompt() )
+  if ( operator == '+') {
+    console.log( x1 + x2 )
+  } else if ( operator == '-' ) {
+    console.log( x1 - x2 )
+  } else if ( operator == '*' ) {
+    console.log( x1 * x2 )
+  } else if ( operator == "/" ) {
+    console.log( x1 / x2 )
+  } else {
+    console.log( 'Invalid operator!' )
+  }
+</script>
+
+<script xtype="norun" id="ch0104/20">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  var c = Number( prompt() )
+  var delta = b * b - 4 * a * c
+  var x1
+  var x2
+
+  if ( delta > 0 ) {
+    x1 = ( -b + Math.sqrt( delta ) )  / ( 2 * a )
+    x2 = ( -b - Math.sqrt( delta ) )  / ( 2 * a )
+    console.log( "x1=" + x1.toFixed(5) + ";x2=" + x2.toFixed(5) )
+  } else if ( delta == 0 ) {
+    x1 = ( -b + Math.sqrt( delta ) )  / ( 2 * a )
+    console.log( "x1=x2=" + x1.toFixed)
+  } else {
+    x1 = "" + ( - b / ( 2 * a ) ).toFixed(5) + "+" + ( Math.sqrt( -delta ) / ( 2 * a ) ).toFixed(5)
+    x2 = "" + ( - b / ( 2 * a ) ).toFixed(5) + "-" + ( Math.sqrt( -delta ) / ( 2 * a ) ).toFixed(5)
+    console.log( "x1=" + x1 + "i;x2=" + x2 + "i" )
+  } 
+
+</script>
+
+<script xtype="norun" id="ch0104/21">
+  var n = Number( prompt() )
+  var x = Number( prompt() )
+  var y = Number( prompt() )
+
+  console.log( n - Math.ceil( y / x ))
+</script>
