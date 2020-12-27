@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-12-08 14:39:54
  * @LastEditors: eric
- * @LastEditTime: 2020-12-27 13:25:14
+ * @LastEditTime: 2020-12-27 20:16:04
  */
 
 var erichen1995 = function () {
@@ -78,16 +78,32 @@ var erichen1995 = function () {
     return array
   }
 
-  function find(collection, predicate=_.identity, fromIndex=0) {
-    
-  }
-
+  /**
+   * @description: 返回第一个通过 predicate 判断为真值的元素的索引值
+   * @param {array} array
+   * @param {function} predicate
+   * @param {number} fromIndex
+   * @return {number}
+   */
   function findIndex(array, predicate = identify, fromIndex = 0) {
-
+    for(let i = fromIndex; i  < array.length; i++) {
+      predicate = iteratee(predicate)
+      if(predicate(array[i])) return i
+    }
   }
 
-  function findLastIndex() {
-
+  /**
+   * @description: 从右到左 返回第一个通过 predicate 判断为真值的元素的索引值
+   * @param {*} array
+   * @param {*} predicate
+   * @param {*} fromIndex
+   * @return {*}
+   */
+  function findLastIndex(array, predicate = identify, fromIndex = array.length - 1) {
+    for (let i = fromIndex; i > -1; i--) {
+      predicate = iteratee(predicate)
+      if(predicate(array[i])) return i
+    }
   }
 
   function flatten(array) {
@@ -148,7 +164,7 @@ var erichen1995 = function () {
     let str = ''
     for (let i = 0; i < array.length; i++) {
       if (i === 0) str += array[i]
-      else str += separator + array[i]
+      else str += separator + '' + array[i]
     }
     return str
   }
