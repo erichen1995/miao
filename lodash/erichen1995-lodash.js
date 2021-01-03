@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-12-08 14:39:54
  * @LastEditors: eric
- * @LastEditTime: 2020-12-27 20:16:04
+ * @LastEditTime: 2020-12-28 14:11:35
  */
 
 var erichen1995 = function () {
@@ -21,7 +21,7 @@ var erichen1995 = function () {
    * @param {*} predicate
    * @return {function}
    */
-  function iteratee(predicate) {
+  function handleIteratee(predicate) {
     let type = checkType(predicate)
     if (type == '[object Function]') return predicate
     if (type == '[object Array]') return (item) => item[predicate[0]] == predicate[1]
@@ -29,6 +29,7 @@ var erichen1995 = function () {
     if (type == '[object String]') return item => item[predicate]
   }
 
+  /****************************以上是辅助函数*****************************/ 
 
   function chunk(array, size = 1) {
     let result = []
@@ -54,6 +55,38 @@ var erichen1995 = function () {
     return result
   }
 
+  /**
+   * @description: 建一个新数组，这个数组中的值,为array中排除了给valus中的值
+   * @param {array} array
+   * @param {array} values
+   * @return {array}
+   */
+  function difference(array, ...values) {
+    let res = []
+    let val = flattenDeep(values)
+    let j = 0
+    for (let i = 0; i < array.length; i++) {
+      if (!val.includes(array[i])) {
+        res.push(array[i])
+      }
+    }
+    return res
+  }
+
+  function differenceBy(array, ...values) {
+    let res = []
+    
+    let val = flattenDeep(values)
+    let j = 0
+    let n = values.length
+    val = val.map(it => iteratee(it))
+    for (let i = 0; i < array.length; i++) {
+      if (!val.includes(iteratee(array[i]))) {
+        res.push(array[i])
+      }
+    }
+    return res
+  }
 
   function drop(array, n = 1) {
     let result = []
@@ -87,7 +120,7 @@ var erichen1995 = function () {
    */
   function findIndex(array, predicate = identify, fromIndex = 0) {
     for(let i = fromIndex; i  < array.length; i++) {
-      predicate = iteratee(predicate)
+      predicate = handleIteratee(predicate)
       if(predicate(array[i])) return i
     }
   }
@@ -101,7 +134,7 @@ var erichen1995 = function () {
    */
   function findLastIndex(array, predicate = identify, fromIndex = array.length - 1) {
     for (let i = fromIndex; i > -1; i--) {
-      predicate = iteratee(predicate)
+      predicate = handleIteratee(predicate)
       if(predicate(array[i])) return i
     }
   }
@@ -381,8 +414,10 @@ var erichen1995 = function () {
   }
 
   return {
-    compact,
     chunk,
+    compact,
+    difference,
+    differenceBy,
     drop,
     dropRight,
     fill,
