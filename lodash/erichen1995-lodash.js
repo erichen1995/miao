@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-12-08 14:39:54
  * @LastEditors: eric
- * @LastEditTime: 2020-12-28 14:11:35
+ * @LastEditTime: 2021-01-03 20:58:33
  */
 
 var erichen1995 = function () {
@@ -73,17 +73,35 @@ var erichen1995 = function () {
     return res
   }
 
+
+
   function differenceBy(array, ...values) {
     let res = []
+    let predicate = last(values)
+    values = flattenDeep(values)
     
-    let val = flattenDeep(values)
-    let j = 0
-    let n = values.length
-    val = val.map(it => iteratee(it))
-    for (let i = 0; i < array.length; i++) {
-      if (!val.includes(iteratee(array[i]))) {
-        res.push(array[i])
+    if (typeof predicate == "function") {
+      predicate = values.pop()
+      values = values.map(it => predicate(it))
+      for (let i = 0; i < array.length; i++) {
+        if (!values.includes(predicate(array[i]))) {
+          res.push(array[i])
+        }
       }
+    } else if (typeof predicate == "string") {
+      predicate = values.pop()
+      for (let item1 of array) {
+        let flag = true
+        for (let item2 of values) {
+          if (item1[predicate] == item2[predicate]) {
+            flag = false
+            break
+          }
+        }
+        if (flag) res.push(item1)
+      }
+    } else {
+      res = difference(array, ...values)
     }
     return res
   }
