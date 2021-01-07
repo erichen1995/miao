@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-12-08 14:39:54
  * @LastEditors: eric
- * @LastEditTime: 2021-01-03 20:58:33
+ * @LastEditTime: 2021-01-07 19:46:32
  */
 
 var erichen1995 = function () {
@@ -16,16 +16,29 @@ var erichen1995 = function () {
     return Object.prototype.toString.call(val)
   }
 
-  /**
-   * @description: 输入predicate 根据其类型返回一个函数
-   * @param {*} predicate
-   * @return {function}
-   */
-  function handleIteratee(predicate) {
+  function hasSameAttr(obj1, obj2) {
+    for (let key in obj1) {
+      if (typeof obj1[key] != "object" && typeof obj2[key] != "object") {
+        if (key in obj2 && obj1[key] != obj2[key]) return false
+      } else {
+        if (!hasSameAttr(obj1[key], obj2[key])) return false
+      }
+    }
+    return true
+  }
+
+
+  function handleIteratee(predicate, hassame = false) {
     let type = checkType(predicate)
     if (type == '[object Function]') return predicate
     if (type == '[object Array]') return (item) => item[predicate[0]] == predicate[1]
-    if (type == '[object Object]') return isEqual.bind(null, predicate)
+    if (type == '[object Object]') {
+      if (hassame == false) {
+        return isEqual.bind(null, predicate)
+      } else {
+        return hasSameAttr.bind(null, predicate)
+      }
+    }
     if (type == '[object String]') return item => item[predicate]
   }
 
@@ -195,8 +208,14 @@ var erichen1995 = function () {
     return array[0]
   }
 
-  function IndexOf() {
-
+  function indexOf(array, value, fromIndex=0) {
+    fromIndex < 0 ? fromIndex = array.length + fromIndex : fromIndex
+    for (let i = fromIndex; i < array.length; i++) {
+      if (array[i] == value) {
+        return i
+      }
+    }
+    return -1
   }
 
 
@@ -333,7 +352,14 @@ var erichen1995 = function () {
   }
 
   function filter(collection, predicate = identify) {
-
+    let res = []
+    predicate = handleIteratee(predicate, true)
+    for (let item of collection) {
+      if (predicate(item)) {
+        res.push(item)
+      }
+    }
+    return res
   }
 
 
@@ -446,7 +472,7 @@ var erichen1995 = function () {
     flattenDepth,
     fromPairs,
     head,
-    IndexOf,
+    indexOf,
     initial,
     join,
     last,
